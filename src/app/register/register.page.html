@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>FitConnect</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion.content">
+  <body>
+    
+  <div class="container">
+    <div class="form-box">
+      <h1 class="page-title">Insira as informações abaixo para se cadastrar</h1>
+      <div class="border"></div>
+      <form class="register-form" [formGroup]="registerForm" (ngSubmit)="submitRegister()" method="POST">
+        <div class="input-box">
+          <ion-input label="Nome" formControlName="name" name="name" color="primary" placeholder="Insira seu nome" labelPlacement="floating" [clearInput]="true" class="input"></ion-input>
+          <ion-note *ngIf="registerForm.controls['name'].invalid && registerForm.controls['name'].touched" color="danger">Campo obrigatório.</ion-note>
+        </div>
+        <div class="input-box">
+          <ion-input label="E-mail" formControlName="email" name="email" color="primary" placeholder="exemplo@exemplo.com" labelPlacement="floating" [clearInput]="true" class="input"></ion-input>
+          <ion-note *ngIf="registerForm.controls['email'].invalid && registerForm.controls['email'].touched" color="danger">E-mail inválido</ion-note>
+        </div>
+        <div class="input-box">
+          <ion-input type="date" label="Data de nascimento" formControlName="birth" name="birth" color="primary" labelPlacement="floating" [clearInput]="true" class="input"></ion-input>
+          <ion-note *ngIf="registerForm.controls['birth'].invalid && registerForm.controls['birth'].touched" color="danger">Campo inválido</ion-note>
+        </div>
+        <div class="input-box">
+          <ion-input type="password" label="Senha" formControlName="pass" name="pass" placeholder="Mínimo de 8 dígitos" color="primary" labelPlacement="floating" [clearInput]="true" class="input"></ion-input>
+          <ion-note *ngIf="registerForm.controls['pass'].invalid && registerForm.controls['pass'].touched" color="danger">A senha deve conter 8 dígitos</ion-note>
+        </div>
+        <div class="input-box">
+          <ion-input type="password" label="Confirme a senha" formControlName="confirmPass" placeholder="As senhas devem ser iguais" color="primary" labelPlacement="floating" [clearInput]="true" class="input"></ion-input>
+          <ion-note *ngIf="registerForm.controls['confirmPass'].invalid && registerForm.controls['confirmPass'].touched" color="danger">Campo obrigatório</ion-note>
+        </div>
+        <ion-button class="btn" expand="full" type="submit" [disabled]="registerForm.invalid || registerForm.pristine">Cadastrar</ion-button>
+        <p class="login-link">Já possui uma conta? Faça o login <a routerLink="/login">aqui</a></p>
+      </form>
+    </div>
+  </div>
+</body>
+</ion-content>

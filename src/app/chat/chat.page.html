@@ -1,0 +1,32 @@
+<ion-content>
+  <style>
+    iframe span {
+      display: none;
+    }
+  </style>
+  <div class="container">
+    <div class="menu">
+      <div class="return">
+        <a routerLink="/home"  class="return-btn"><ion-icon name="arrow-undo-outline"></ion-icon></a>
+      </div>
+    </div>
+    <div class="content">
+      <div class="header">
+        <a routerLink="/home"  class="return-btn-header"><ion-icon name="arrow-undo-outline"></ion-icon></a>
+        <h1>FitConnect</h1>
+        <a class="header-options"><ion-icon name="ellipsis-vertical"></ion-icon></a>
+      </div>
+      <div class="chat">
+        <div class="talkjs" #talkjsContainer></div>
+      </div>
+<!--  <div class="message-box">
+        <form action="">
+          <label for="file" class="file-label"><ion-icon name="cloud-upload-outline"></ion-icon></label>
+          <input type="file" class="file-input" name="file" id="file">
+          <ion-input type="text" inputmode="text" class="message-input" placeholder="Escreva uma mensagem..."></ion-input>
+          <button class="btn-send" type="submit"><ion-icon name="send"></ion-icon></button>
+        </form>
+      </div> -->
+    </div>
+  </div>
+</ion-content>

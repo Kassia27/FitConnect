@@ -1,0 +1,272 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+ion-content {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    width: 5%;
+    height: 100%;
+    position: fixed;
+    left: 0%;
+    padding: 12px 0px;
+    background-color: #1a1a1a;
+
+    @media(max-width: 1000px) {
+        width: 8vw;
+    }
+
+    @media(max-width: 600px) {
+        display: none;
+        width: 10vw;
+    }
+}
+
+.menu a.return-btn {
+    font-size: 32px;
+}
+
+.header a.return-btn-header {
+    display: none;
+    font-size: 24px;
+    position: fixed;
+    left: 2%;
+
+    @media(max-width: 600px) {
+        display: block;
+    }
+}
+
+.header-options {
+    display: none;
+    font-size: 24px;
+    position: fixed;
+    background-color: none;
+    right: 2%;
+    cursor: pointer;
+
+    @media(max-width: 600px) {
+        display: block;
+    }
+}
+
+.content {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 100vh;
+    justify-self: right;
+
+    @media(max-width: 1000px) {
+        width: 92vw;
+    }
+
+    @media(max-width: 600px) {
+        width: 100vw;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    height: 50px;
+    background-color: #1a1a1a;
+    color: white;
+    position: fixed;
+
+    @media(max-width: 600px) {
+        width: 100vw
+    }
+}
+
+.header h1 {
+    text-align: center;
+    font-size: 16px;
+}
+
+.chat {
+    height: 100%;
+    margin-top: 60px;
+    /* display: flex;
+    align-content: center;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #ccc;
+    margin-top: 14px;
+    margin-bottom: 4rem;
+    overflow: auto;
+    padding: 6px;
+    padding-top: 32px; */
+}
+
+.talkjs {
+    height: 99%;
+}
+
+.msg-re {
+    color: #111;
+    max-width: 60%;
+    width: max-content;
+    background-color: #ccc;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 6px;
+    
+    @media(max-width: 600px) {
+        max-width: 80%;
+    }
+}
+
+.msg-de {
+    color: #111;
+    margin-top: 6px;
+    max-width: 60%;
+    width: max-content;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: #a348ff80;
+    align-self:flex-end;
+    word-wrap: break-word;
+
+    @media(max-width: 600px) {
+        max-width: 80%;
+    }
+}
+
+.message-box {
+    width: 95%;
+    height: 60px;
+    position: fixed;
+    bottom: 0%;
+    border-radius: 12px;
+
+    @media(max-width: 600px) {
+        width: 100vw;
+    }
+}
+
+.message-box form {
+    display: flex;
+    width: 100%;
+    height: 100%
+}
+
+.file-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 80px;
+    background-color: #782ac8;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.8s;
+
+    @media(max-width: 1000px) {
+        background-color: #fff
+    }
+}
+
+.file-label:hover {
+    background-color: #a348ff;
+}
+
+@media(max-width: 1000px) {
+    .file-label {
+        background-color: #fff;
+        width: 70px;
+        border-top: 1px solid #ccc;
+    }
+
+    .file-label:hover {
+        background-color: #fff;
+    }
+
+    .file-label ion-icon {
+        color: #782ac8;
+        transition: 0.8s;
+    }
+
+    .file-label ion-icon:hover {
+        color: #9f43fa;
+    }
+}
+
+.file-input {
+    display: none;
+}
+
+ion-input.message-input {
+    border-top: 1px solid #ccc;
+/*     border-radius: 12px; */
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    color: #111;
+    --highlight-color-focused: none;
+    --highlight: none;
+    --padding-start: 12px; 
+}
+
+.btn-send {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    background-color: #782ac8;
+    transition: 0.8s;
+
+    @media(max-width: 1000px) {
+        justify-content: left;
+        background-color: #fff;
+        width: 70px;
+        border-top: 1px solid #ccc;
+    }
+
+    @media(max-width: 600px) {
+        width: 50px;
+    }
+
+}
+
+.btn-send ion-icon {
+    font-size: 24px;
+
+    @media(max-width: 1000px) {
+        color: #782ac8;
+    }
+}
+
+.btn-send:hover {
+    background-color: #9f43fa;
+
+    @media(max-width: 1000px) {
+        background-color: #fff;
+    }
+}
+
+@media(max-width: 1000px) {
+    .btn-send ion-icon {
+        color: #782ac8;
+        transition: 0.8s;
+    }
+
+    .btn-send ion-icon:hover {
+        color: #9f43fa;
+    }
+};

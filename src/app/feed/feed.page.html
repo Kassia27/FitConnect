@@ -1,0 +1,76 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <a routerLink="/home"  class="return-btn-header" ><ion-icon name="arrow-undo-outline" >Voltar</ion-icon></a>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Feed</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<section class="feeds">
+  <h1>Novidades da semana</h1>
+
+  
+  <div class="blocos">
+
+    <div class="feedPost">
+      <form  (ngSubmit)="profileImage()" method="post" class="formPost" >
+        <ion-input type="text" placeholder="o que está pensando.." class="formtext" ></ion-input>
+        <ion-input type="file" placeholder="anexar arquivo " class="file"> </ion-input>
+        <ion-button class="button">Enviar</ion-button>
+      </form>
+
+    </div>
+
+    <div class="bl1"> 
+      <div class="postagem"></div>
+      <ion-icon class="icon" name="heart-outline" size="large" [ngClass]="{'icon-clicked': isIconClicked('iconc1')}" (click)="onIconClick('iconc1')" ></ion-icon>
+      <ion-icon name="chatbubble-outline" class="comentario1" size="large"></ion-icon>
+   
+      </div>
+    <div class="bl2"> 
+      <ion-icon class="icon" name="heart-outline" size="large" [ngClass]="{'icon-clicked': isIconClicked('iconc2')}" (click)="onIconClick('iconc2')"></ion-icon>
+      <ion-icon name="chatbubble-outline" class="comentario2" size="large"></ion-icon>
+
+    </div>
+    <div class="bl3"> 
+      <ion-icon class="icon" name="heart-outline" size="large" [ngClass]="{'icon-clicked': isIconClicked('iconc3')}" (click)="onIconClick('iconc3')"></ion-icon>
+      <ion-icon name="chatbubble-outline" class="comentario3" size="large"></ion-icon>
+
+    </div>
+  </div>
+
+</section>
+<script>
+  // Aguardar a carga completa da página antes de executar o script
+  document.addEventListener("DOMContentLoaded", function() {
+    // Selecione o elemento do ícone usando JavaScript
+    const icon = document.querySelector(".icon");
+    let isLiked = false; // Variável para rastrear o estado de curtida
+
+    // Adicione um evento de clique para o ícone
+    icon.addEventListener("click", function() {
+      // Inverte o estado de curtida
+      isLiked = !isLiked;
+      
+      // Atualiza a classe do elemento para alterar a cor do ícone quando curtido
+      if (isLiked) {
+        icon.classList.add("liked");
+      } else {
+        icon.classList.remove("liked");
+      }
+    });
+  });
+</script>
+<!-- <nav class="navbar">
+  <ion-button routerLink="/home" class="nav-btn"><ion-icon class="btn-icon" name="home-outline"></ion-icon><p>Home</p></ion-button>
+  <ion-button routerLink="/feed" class="nav-btn"><ion-icon class="btn-icon" class="btn-icon1"name="newspaper-outline"></ion-icon><p>Feed</p></ion-button>
+  <ion-button routerLink="/chat" class="nav-btn"><ion-icon class="btn-center-icon" name="people-circle-outline"></ion-icon><p>Encontros</p></ion-button>
+  <ion-button routerLink="/notification" class="nav-btn"><ion-icon class="btn-icon" name="notifications-outline"></ion-icon><p>Notificações</p></ion-button>
+  <ion-button routerLink="/profile"class="nav-btn"><ion-icon class="btn-icon" name="person-circle-outline"></ion-icon><p>Perfil</p></ion-button>
+</nav> -->
+</ion-content>

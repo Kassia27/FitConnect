@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">perfil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="fundo">
+    <div class="conteudo">
+      <div class="guias">
+        <ion-button>Suporte</ion-button>
+        <ion-button>Feedback</ion-button>
+        <ion-button routerLink="">Sair</ion-button>
+      </div>
+      <div class="Foto"><img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt=""></div>
+
+      <div class="Nome">
+        <p>Nome do Usuário</p>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar">
+    <ion-button routerLink="/home" class="nav-btn"><ion-icon class="btn-icon" name="home-outline"></ion-icon><p>Home</p></ion-button>
+    <ion-button routerLink="/feed" class="nav-btn"><ion-icon class="btn-icon" name="newspaper-outline"></ion-icon><p>Feed</p></ion-button>
+    <ion-button routerLink="/chat" class="nav-btn"><ion-icon class="btn-center-icon" name="people-circle-outline"></ion-icon><p>Encontros</p></ion-button>
+    <ion-button routerLink="/notification" class="nav-btn"><ion-icon class="btn-icon" name="notifications-outline"></ion-icon><p>Notificações</p></ion-button>
+    <ion-button routerLink="/profile"class="nav-btn"><ion-icon class="btn-icon" name="person-circle-outline"></ion-icon><p>Perfil</p></ion-button>
+  </nav>
+</ion-content>

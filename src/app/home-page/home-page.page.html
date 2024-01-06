@@ -1,0 +1,103 @@
+<script type="text/javascript">
+  function info1() {
+    document.getElementById('id')
+  }
+</script>
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <nav class="navbar">
+      <ion-button routerLink="/home-page" class="nav-btn"><ion-icon class="btn-icon" name="home-outline"></ion-icon><p>Home</p></ion-button>
+      <ion-button routerLink="/feed" class="nav-btn"><ion-icon class="btn-icon" name="newspaper-outline"></ion-icon><p>Feed</p></ion-button>
+      <ion-button routerLink="/chat" class="nav-btn"><ion-icon class="btn-center-icon" name="people-circle-outline"></ion-icon><p>Encontros</p></ion-button>
+      <ion-button routerLink="/notification" class="nav-btn"><ion-icon class="btn-icon" name="notifications-outline"></ion-icon><p>Notificações</p></ion-button>
+      <ion-button routerLink="/profile"class="nav-btn"><ion-icon class="btn-icon" name="person-circle-outline"></ion-icon><p>Perfil</p></ion-button>
+    </nav>
+    <div class="content">
+      <div class="header">
+        <h1>FitConnect</h1>
+      </div>
+      <div class="divBusca">
+        <ion-icon name="search" class="imgBusca" alt="busca"> </ion-icon>
+        <ion-input type="search" class="txtBusca" placeholder="Pesquisar" clearInput="true"></ion-input>
+        <button type="submit" class="btnBusca">Buscar</button>
+      </div>
+      <div class="info-box">
+        <ul class="info-carrousel">
+          <li>
+            <input type="radio" id="info1" name="info" checked>
+            <label for="info1"></label>
+            <div class="info">
+              <div class="imgInfo">
+                <img src="assets/home/info-image-1.png" >
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolor ab magni delectus soluta natus voluptatibus veritatis dolorem quae nihil!</p>
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="info2" name="info">
+            <label for="info2"></label>
+            <div class="info">
+              <div class="imgInfo">
+                <img src="assets/home/info-image-2.png" >
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eum maiores repudiandae praesentium inventore autem adipisci sequi enim suscipit nobis.</p>
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="info3" name="info">
+            <label for="info3"></label>
+            <div class="info">
+              <div class="imgInfo">
+                <img src="assets/home/info-image-3.png" >
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eum maiores repudiandae praesentium inventore autem adipisci sequi enim suscipit nobis.</p>
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="info4" name="info">
+            <label for="info4"></label>
+            <div class="info">
+              <div class="imgInfo">
+                <img src="assets/home/info-image-4.png" >
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eum maiores repudiandae praesentium inventore autem adipisci sequi enim suscipit nobis.</p>
+            </div>
+          </li>
+        </ul>
+      </div> <!-- Fim info-box -->
+    
+      <h2>Exercicios</h2>
+      <div class="tools">
+        <div class="box1">
+          <p>Treinos em casa</p>
+          <img src="assets/home/fitconnect3.jpg" width="300" height="200" >
+          <img src="assets/home/fitconnect8.jpg" width="300" height="200" >
+          <img src="assets/home/fitconnect6.jpg" width="300" height="200" >
+        </div>
+
+        <div class="box2">
+        <p>Exercicio ao ar livre</p>
+        <img src="assets/home/fitconnect1.jpg" width="300" height="200" >
+        <img src="assets/home/fitconnect.jpg" width="300" height="200" >
+        <img src="assets/home/fitconnect2.jpg" width="300" height="200" >
+      </div>
+
+      <div class="box3">
+        <p>Excecios em dupla</p>
+        <img src="assets/home/fitconnect5.jpg" width="300" height="200" >
+        <img src="assets/home/fitconnect4.jpg" width="300" height="200" >
+        <img src="assets/home/fitconnect7.jpg" width="300" height="200" >
+      </div>
+
+    <div class="box4">
+      <p>Outros</p>
+      <img src="assets/home/fitconnect10.jpg" width="300" height="200" >
+      <img src="assets/home/fitconnect11.jpg" width="300" height="200" >
+      <img src="assets/home/fitconnect12.jpg" width="300" height="200" >
+    </div>
+  </div>
+
+    </div> <!-- Fim Content -->
+  </div> <!-- Fim Container -->
+</ion-content>
+

@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="title">Login FitConnect</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+   
+       
+        <div class="box">
+          <form [formGroup]="formLogin" (ngSubmit)="submitLogin()" method="POST">
+
+        <div class="logo">
+          <img src="assets/login/fitConct2.png" >
+        </div>
+      
+        <hr>
+        <ion-label class="label">E-mail</ion-label>
+        <div class="input-login">
+          <ion-input   name="email" formControlName="email"  class="caixinha"></ion-input> 
+         <ion-note class="note" *ngIf="formLogin.controls['email'].invalid && formLogin.controls['email'].touched" >inválido</ion-note> 
+        </div><br>
+
+        <ion-label class="label">Senha:</ion-label>
+        <div class="input-login">
+          <ion-input  type="password" name="pass" formControlName="pass" class="caixinha"></ion-input>
+          <ion-note class="note" *ngIf="formLogin.controls['pass'].invalid && formLogin.controls['pass'].touched" >Campo necessário</ion-note> 
+        </div>
+
+        <ion-button expand="full" type="submit" class="btn" S> Entrar </ion-button>
+        <!-- <ion-button expand="full" type="submit" [disabled]="formLogin.invalid || formLogin.pristine" class="btn">Entrar</ion-button> -->
+        <p class="cad">Sem conta? Cadastre-se<a routerLink="/register"> aqui </a></p>
+      </form>
+    </div>
+  </div>
+</ion-content>

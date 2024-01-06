@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Notificação</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" style="text-align: center;"><p>Notificações</p></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="opcoes">
+    <ion-button routerLink="/home"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    <ion-button routerLink="/home" class="mais">Mostrar mais + </ion-button>
+  </div>
+
+
+  <div class="notificacao">
+    <div class="nt1">
+      <h4>FitConnect</h4>
+      <p class="tempo">Ontem 06:30</p>
+      <p>Fazer aula de crossfit</p>
+    </div>
+
+    <div class="nt1">
+      <h4>FitConnect</h4>
+      <p class="tempo">Ontem 21:00</p>
+      <p>Maria deseja ser sua parceira de treino</p>
+    </div>
+
+    <div class="nt1">
+      <h4>FitConnect</h4>
+      <p class="tempo">Hoje 09:30</p>
+      <p>Evento marcado para 12:40 a 400m de você</p>
+    </div>
+
+    <div class="nt1">
+      <h4>FitConnect</h4>
+      <p class="tempo">Hoje 11:30</p>
+      <p>Não esqueça de falar com seu parceiro de treino hoje.</p>
+    </div>
+  </div>
+</ion-content>
+
